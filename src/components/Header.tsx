@@ -65,7 +65,7 @@ export const Header = () => {
           <p className="text-text-second mt-[18px] ml-[5px] max-md:max-w-[300px] max-mobile:w-[55%] font-manrope">
             Обирайте ідеальні квіти для ваших особливих подій у Flora Komarno.
           </p>
-          <div className="bg-button-bg text-button-txt p-[10px] rounded-[8px] mt-[30px] box-border ml-[5px] font-roboto w-[140px]">
+          <div className="bg-button-bg text-button-txt p-[10px] rounded-[8px] mt-[30px] box-border ml-[5px] font-roboto w-[140px] min-w-[140px]">
             <a href="tel:+380679707448">Замовити зараз</a>
           </div>
         </div>
