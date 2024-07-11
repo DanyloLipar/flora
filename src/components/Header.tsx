@@ -69,7 +69,7 @@ export const Header = () => {
             <a href="tel:+380679707448">Замовити букет</a>
           </div>
         </div>
-        <div className="max-lg:absolute right-4 max-lg:bottom-0 max-sm:right-0 max-sm:w-[40%]">
+        <div className="max-lg:absolute right-4 max-lg:bottom-0 max-sm:-right-4 max-sm:w-[40%]">
           <Image
             className="w-[390px] max-lg:w-[240px] max-sm:w-[90vw] "
             src={tulips}
