@@ -58,7 +58,7 @@ export const Footer = () => {
             </li>
             <li className="ml-[3px] max-md:ml-[5px]">
               <a
-                className="flex gap-[10px] items-center text-button-txt hover:text-button-bg"
+                className="flex gap-[10px] items-center text-button-txt min-lg:hover:text-button-bg"
                 href={`tel:+380679707448`}
                 onMouseEnter={() => setPhone(true)}
                 onMouseLeave={() => setPhone(false)}
