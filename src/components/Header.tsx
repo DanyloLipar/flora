@@ -4,7 +4,6 @@ import Image from "next/image";
 import tulips from "../assets/images/flowers-bg.svg";
 import Link from "next/link";
 import { BurgerMenu } from "./BurgerMenu";
-import Head from "next/head";
 
 export const Header = () => {
   const scrollToSection = (id: string) => {
@@ -16,12 +15,6 @@ export const Header = () => {
 
   return (
     <header className="flex-col bg-header-bg">
-      <Head>
-        <meta
-          name="google-adsense-account"
-          content="ca-pub-9306396142257119"
-        ></meta>
-      </Head>
       <section className="flex justify-between items-center max-w-[85%] mx-[auto] pt-[30px] max-lg:max-w-[90%] max-md:pt-[20px]">
         <h1 className="text-[30px] font-semibold text-button-bg max-lg:text-[27px] max-md:text-[25px] font-manrope max-md:tracking-wider">
           Flora{" "}
