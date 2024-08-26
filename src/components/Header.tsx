@@ -4,6 +4,7 @@ import Image from "next/image";
 import tulips from "../assets/images/flowers-bg.svg";
 import Link from "next/link";
 import { BurgerMenu } from "./BurgerMenu";
+import logo from "../assets/images/logo.svg";
 
 export const Header = () => {
   const scrollToSection = (id: string) => {
@@ -14,12 +15,38 @@ export const Header = () => {
   };
 
   return (
-    <header className="flex-col bg-header-bg">
+    <header className="flex-col bg-header-bg relative">
+      <div className="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <section className="flex justify-between items-center max-w-[85%] mx-[auto] pt-[30px] max-lg:max-w-[90%] max-md:pt-[20px]">
-        <h1 className="text-[30px] font-semibold text-button-bg max-lg:text-[27px] max-md:text-[25px] font-manrope max-md:tracking-wider">
+        {/* <h1 className="text-[30px] font-semibold text-button-bg max-lg:text-[27px] max-md:text-[25px] font-dm max-md:tracking-wider">
           Flora{" "}
           <span className="text-title-secondary text-stroke">Komarno</span>
-        </h1>
+        </h1> */}
+        <div className="w-[90px] h-[90px] cursor-pointer max-lg:w-[60px] max-lg:h-[60px]">
+          <Image className="w-[100%] h-[100%]" src={logo} alt="flora_logo" />
+        </div>
         <nav className="flex items-center max-md:hidden">
           <ul className="flex items-center gap-[25px] max-lg:gap-[20px]">
             <li>

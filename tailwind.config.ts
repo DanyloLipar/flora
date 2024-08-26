@@ -27,6 +27,7 @@ const config: Config = {
         poppins: ["Poppins, sans-serif"],
         manrope: ["Manrope, sans-serif"],
         roboto: ["Roboto, sans-serif"],
+        dm: ["DM Serif Text serif"],
       },
       screens: {
         mobile: "400px",

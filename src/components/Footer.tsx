@@ -12,11 +12,41 @@ import locationIconHovered from "../assets/images/location-hovered.svg";
 import Image from "next/image";
 import { useState } from "react";
 
+enum PlatformsVariant {
+  INSTAGRAM = "Instagram",
+  FACEBOOK = "Facebook",
+  PHONE = "Phone",
+  LOCATION = "Location",
+}
+
 export const Footer = () => {
   const [instagram, setInstagram] = useState<boolean>(false);
   const [facebook, setFacebook] = useState<boolean>(false);
   const [phone, setPhone] = useState<boolean>(false);
   const [location, setLocation] = useState<boolean>(false);
+
+  const switchLogoColor = (platform: string) => {
+    if (window.matchMedia("(max-width: 1024px)").matches) {
+      return;
+    }
+
+    switch (platform) {
+      case PlatformsVariant.INSTAGRAM:
+        setInstagram(!instagram);
+        break;
+      case PlatformsVariant.FACEBOOK:
+        setFacebook(!facebook);
+        break;
+      case PlatformsVariant.PHONE:
+        setPhone(!phone);
+        break;
+      case PlatformsVariant.LOCATION:
+        setLocation(!location);
+        break;
+      default:
+        break;
+    }
+  };
 
   return (
     <footer id="contacts" className="bg-footer-bg py-[30px]">
@@ -28,10 +58,10 @@ export const Footer = () => {
           <ul className="flex flex-col items-start gap-[10px] mt-[20px]">
             <li className="ml-[3px]">
               <Link
-                className="flex gap-[12px] items-center text-button-txt hover:text-button-bg"
+                className="flex gap-[12px] items-center text-button-txt lg:hover:text-button-bg"
                 href="https://www.instagram.com/flora_komarno/"
-                onMouseEnter={() => setInstagram(true)}
-                onMouseLeave={() => setInstagram(false)}
+                onMouseEnter={() => switchLogoColor(PlatformsVariant.INSTAGRAM)}
+                onMouseLeave={() => switchLogoColor(PlatformsVariant.INSTAGRAM)}
               >
                 <Image
                   src={instagram ? instagramIconHovered : instagramIcon}
@@ -43,10 +73,10 @@ export const Footer = () => {
             </li>
             <li>
               <Link
-                className="flex gap-[8px] items-center text-button-txt hover:text-button-bg"
+                className="flex gap-[8px] items-center text-button-txt lg:hover:text-button-bg"
                 href="https://www.facebook.com/Flora.Komarn/"
-                onMouseEnter={() => setFacebook(true)}
-                onMouseLeave={() => setFacebook(false)}
+                onMouseEnter={() => switchLogoColor(PlatformsVariant.FACEBOOK)}
+                onMouseLeave={() => switchLogoColor(PlatformsVariant.FACEBOOK)}
               >
                 <Image
                   src={facebook ? facebookIconHovered : facebookIcon}
@@ -58,10 +88,10 @@ export const Footer = () => {
             </li>
             <li className="ml-[3px] max-md:ml-[5px]">
               <a
-                className="flex gap-[10px] items-center text-button-txt min-lg:hover:text-button-bg"
+                className="flex gap-[10px] items-center text-button-txt lg:hover:text-button-bg"
                 href={`tel:+380679707448`}
-                onMouseEnter={() => setPhone(true)}
-                onMouseLeave={() => setPhone(false)}
+                onMouseEnter={() => switchLogoColor(PlatformsVariant.PHONE)}
+                onMouseLeave={() => switchLogoColor(PlatformsVariant.PHONE)}
               >
                 <Image
                   className="h-[21px] w-[20px]"
@@ -73,11 +103,11 @@ export const Footer = () => {
             </li>
             <li>
               <Link
-                className="flex gap-[12px] items-center text-button-txt hover:text-button-bg"
+                className="flex gap-[12px] items-center text-button-txt lg:hover:text-button-bg"
                 target="blank"
                 href="https://maps.app.goo.gl/3gKScgitiTaMvr1e7"
-                onMouseEnter={() => setLocation(true)}
-                onMouseLeave={() => setLocation(false)}
+                onMouseEnter={() => switchLogoColor(PlatformsVariant.LOCATION)}
+                onMouseLeave={() => switchLogoColor(PlatformsVariant.LOCATION)}
               >
                 <Image
                   src={location ? locationIconHovered : locationIcon}
@@ -94,7 +124,7 @@ export const Footer = () => {
             <li>
               <Link
                 href="#about"
-                className="text-button-txt text-[18px] hover:text-button-bg max-md:text-[16px]"
+                className="text-button-txt text-[18px] lg:hover:text-button-bg max-md:text-[16px]"
               >
                 Про нас
               </Link>
@@ -102,7 +132,7 @@ export const Footer = () => {
             <li>
               <Link
                 href="#why-us"
-                className="text-button-txt text-[18px] hover:text-button-bg max-md:text-[16px]"
+                className="text-button-txt text-[18px] lg:hover:text-button-bg max-md:text-[16px]"
               >
                 Чому саме ми?
               </Link>
@@ -110,7 +140,7 @@ export const Footer = () => {
             <li>
               <Link
                 href="#gallery"
-                className="text-button-txt text-[18px] hover:text-button-bg max-md:text-[16px]"
+                className="text-button-txt text-[18px] lg:hover:text-button-bg max-md:text-[16px]"
               >
                 Галерея
               </Link>
@@ -118,7 +148,7 @@ export const Footer = () => {
             <li>
               <Link
                 href="#reviews"
-                className="text-button-txt text-[18px] hover:text-button-bg max-md:text-[16px]"
+                className="text-button-txt text-[18px] lg:hover:text-button-bg max-md:text-[16px]"
               >
                 Відгуки
               </Link>

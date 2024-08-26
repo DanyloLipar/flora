@@ -38,6 +38,29 @@ export const BurgerMenu: React.FC = () => {
         }`}
         onClick={closeMenu}
       >
+        <div className="background">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <nav
           className="flex flex-col items-center justify-center h-full space-y-8"
           onClick={(e) => e.stopPropagation()}

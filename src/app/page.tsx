@@ -7,7 +7,7 @@ import { WhyUs } from "@/components/WhyUs";
 
 export default function Home() {
   return (
-    <>
+    <section>
       <Header />
       <main>
         <WhyUs />
@@ -16,6 +16,6 @@ export default function Home() {
         <Reviews />
       </main>
       <Footer />
-    </>
+    </section>
   );
 }
